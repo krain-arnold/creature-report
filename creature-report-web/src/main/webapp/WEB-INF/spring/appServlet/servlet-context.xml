@@ -21,7 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.onesprice.webapp" />
+	<context:component-scan base-package="com.coppernickel.corp" />
 	
 	
 	

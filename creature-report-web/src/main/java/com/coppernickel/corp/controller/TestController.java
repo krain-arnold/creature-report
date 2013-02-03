@@ -1,25 +1,19 @@
 package com.coppernickel.corp.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.AbstractController;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/test")
-public class TestController extends AbstractController {
+public class TestController {
 
-	@Override
-	protected ModelAndView handleRequestInternal(HttpServletRequest arg0,
-			HttpServletResponse arg1) throws Exception {
-
-		ModelAndView model = new ModelAndView("testView");// this maps to the
-															// jsp name
-		model.addObject("msg", "this is from TestController");
-		return model;
+	@RequestMapping(method = RequestMethod.GET)
+	public String printTest(ModelMap model){
+		model.addAttribute("msg", "this is from TestController");
+		return "testView";
 	}
+	
 
 }

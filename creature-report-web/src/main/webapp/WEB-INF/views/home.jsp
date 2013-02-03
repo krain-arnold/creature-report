@@ -8,8 +8,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>One's Price - Find out where to buy your daily needs at the cheapest price !</title>
-        <meta name="description" content="One's Price, where we tell you the nearest store that has the cheapest price for the stuff you are looking for">
+        <title>Creature Report</title>
+        <meta name="description" content="Wrangling and reporting on your little monsters so you can determine what to do with them">
       
         <link rel="stylesheet" href="<c:url value="resources/css/normalize.css"/>"/>
         <link rel="stylesheet" href="<c:url value="resources/css/main.css"/>"/>
@@ -31,7 +31,7 @@
 		<div id="headerPanel" class="headerPanel">
 			<div class="panelL">
 					<img src="<c:url value="/resources/images/logoSmall.png"/>">
-					<h3>Find out where to buy your daily needs at the cheapest price !</h3>
+					<h3>Creature Report - i iz teh best!</h3>
 			</div>
 		</div>
 	</header>
