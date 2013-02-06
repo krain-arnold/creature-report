@@ -25,6 +25,7 @@
 	href="<c:url value="resources/css/bootstrap.min.css"/>" />
 <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>" />
 
+
 <script src="<c:url value="resources/js/jquery-1.9.0.min.js" />"></script>
 <script src="<c:url value="resources/js/modernizr-2.6.2.min.js"/>"></script>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -36,9 +37,9 @@ var lat;
 var lng;
 function initialize() {
   geocoder = new google.maps.Geocoder();
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
+  var latlng = new google.maps.LatLng(38.5, -77.0);
   var mapOptions = {
-    zoom: 16,
+    zoom: 8,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
@@ -49,7 +50,9 @@ function codeAddress() {
     var address = document.getElementById('address').value;
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
-	  console.log
+	  	console.log(results[0].geometry.location.lat() + " : " + results[0].geometry.location.lng());
+	  	$('#latitude').val(results[0].geometry.location.lat());
+	  	$('#longitude').val(results[0].geometry.location.lng());
         map.setCenter(results[0].geometry.location);
         var marker = new google.maps.Marker({
             map: map,
@@ -98,19 +101,17 @@ $(document).ready(function() {
 		</div>
 	</div>
 	<div class="wrapper">
-		<div class="container home-container">
-
-			<form:form method="POST" commandName="user" modelAttribute="user"
-				id="signup">
-				<img id="logo"
-					src="<c:url value="/resources/images/logoSmall.png" />">
+			<form:form method="POST" commandName="user" modelAttribute="user" id="signup">
+				<img id="logo" src="<c:url value="/resources/images/logoSmall.png" />">
 				<div class="row-fluid">
 					<div class="span10">
 						<h3>Sign Up Now !</h3>
+						<div class="control-group">
+							<div class="controls">
 						<table>
 							<tr>
-								<td><form:label path="userName">User Name</form:label> <form:input
-										path="userName" required="true" /></td>
+								<td><form:label path="userName">User Name</form:label> 
+								<form:input path="userName" required="true" class="input-medium"/></td>
 							</tr>
 							<tr>
 								<td><form:label path="password">Password</form:label> <form:input
@@ -138,7 +139,7 @@ $(document).ready(function() {
 							</tr>
 							<tr>
 							    <td><form:label path="latitude">Latitude</form:label>
-									<form:input path="latitude" type="text" class="latitude"/></td>
+									<form:input path="latitude" type="text" id="latitude"/></td>
 							</tr>
 							<tr>
 							    <td><form:label path="longitude">Longitude</form:label>
@@ -149,6 +150,8 @@ $(document).ready(function() {
 									class="btn btn-large" /></td>
 							</tr>
 						</table>
+						</div>
+						</div>
 					</div>
 
 
@@ -156,10 +159,6 @@ $(document).ready(function() {
 				</div>
 			</form:form>
 		</div>
-
-	</div>
-
-
 
 	<script src="<c:url value="resources/js/bootstrap.js"/>"></script>
 </body>
