@@ -18,8 +18,8 @@
         <link rel="stylesheet" href="<c:url value="resources/css/bootstrap.min.css"/>"/>
         <link rel="stylesheet" href="<c:url value="resources/css/style.css"/>"/>
         
-        <script src="<c:url value="resources/js/jquery-1.8.0.min.js" />"></script>        
-        <script src="<c:url value="resources/js/modernizr-2.6.1.min.js"/>"></script>
+        <script src="<c:url value="resources/js/jquery-1.9.0.min.js" />"></script>        
+        <script src="<c:url value="resources/js/modernizr-2.6.2.min.js"/>"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -36,27 +36,27 @@
 		</div>
 	</header>
 
+	
 	<div class="subnav">
+		<div class="container" id="menuBar">
 			<ul class="nav nav-pills">
-			<li><a href="<c:url value="/" />">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Sign Up</a></li>
-			<li><a href="#">Register Your Store</a></li>
-
-			<li style="float: right;">
-				<ul class="nav nav-pills pull-right">
-					<li><a href="#global">Contact Us</a></li>
-					<li><a href="#global">Send Feedback</a></li>
-				</ul>
-			</li>
-		</ul>
+				<li><a href="<c:url value="/" />">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="<c:url value="/signup" />">Sign Up</a></li>
+				<li><a href="#">Mobile</a></li>
+				<li><a href="#global">Contact Us</a></li>
+				<li><a href="#global">Send Feedback</a></li>
+			</ul>
+		</div>
 	</div>
 	<div class="wrapper">
 	<form id="login"
 		action="<c:url value='j_spring_security_check' />" method="POST"
 		name="f">
 		<c:set var="loginErrorDiv" value="${post.loginerror}"/>
-		<img id="logo" src="<c:url value="/resources/images/logo.png"  />" alt="" />
+		<div class="container">
+			<img id="logo" src="<c:url value="/resources/images/logoSmall.png"  />" alt="" />
+		</div>
 		<div class="row-fluid">
 			<div class="span4">
 				<h1>Welcome !</h1>
@@ -71,16 +71,11 @@
 			<div class="span7 offset1 well about-well">
 				<h2>Sign Up Now !</h2>
 				<ul class="unstyled" style="text-align: justify;">
-					<li><em class="icon-tags"></em> <small> Find out the
-							nearest store that has the cheapest price for fresh vegetables
-							&amp; fruits before you go out for shopping !</small></li>
+					<li><em class="icon-tags"></em> <small> Create you daily reports with ease and style!</small></li>
 					<li><em class="icon-tags"></em> <small> Download our
-							Mobile App and help us in getting the latest price from the
-							stores near you !</small></li>
-					<li><em class="icon-tags"></em> <small> Create your
-							own shopping list before you go and buy ! </small></li>
-					<li><em class="icon-tags"></em> <small> Find out how
-							much you can save over the month before only! </small></li>
+							Mobile App and free yourself from the tedium!</small></li>
+					<li><em class="icon-tags"></em> <small> Use our reporting tools to chart progress.</small></li>
+					<li><em class="icon-tags"></em> <small> Earn back that lost time from having to handwrite all reports! </small></li>
 				</ul>
 				<a class="btn" href="#">More »</a>
 			</div>

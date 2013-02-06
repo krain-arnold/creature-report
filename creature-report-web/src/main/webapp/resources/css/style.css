@@ -47,11 +47,11 @@ form {
 	 -webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
-	border-color:#DA2128;
+	border-color:#343352;
 	-webkit-box-shadow: 0px 0 1px #1A1A1A;
 	-moz-box-shadow: 0px 0 1px #1A1A1A;
 	box-shadow: 0px 0 1px #1A1A1A;
-	color:#DA2128;
+	color:#343352;
 }
 .errorblock{
 	float:left;
@@ -69,17 +69,8 @@ form {
 
 .home-container{
 	padding:10px;
-	min-height:800px;
+	min-height:600px;
 	margin-top:20px;
-	background:#DA2128; 
-	 -webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	
-	-webkit-box-shadow: 0px 0 50px #1a1a1a;
-	-moz-box-shadow: 0px 0 50px #1a1a1a;
-	box-shadow: 0px 0 50px #1a1a1a;	
-
 }
 
 
@@ -149,4 +140,53 @@ form {
 .subnav .pull-right {
 	margin-right:20px;
 	
+}
+
+/* =====================================================================================
+   Sign Up
+   ===================================================================================== */
+.white-well{
+    float: none;
+    border: 1px solid #ddd; 
+    padding: 30px 40px 20px 40px; 
+    margin-top:75px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 815px;
+    background: #fff;
+    min-height:370px;
+    -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	-webkit-box-shadow: 0px 0 50px #1A1A1A;
+	-moz-box-shadow: 0px 0 50px #1A1A1A;
+	box-shadow: 0px 0 50px #1A1A1A;
+}
+
+#signup{
+	width:815px;
+}
+
+#signup table{
+	margin-left:30px;
+	width:750px;
+	border:2px dashed #ccc;
+}
+
+#signup table>tbody>tr>td {
+		padding:10px;	
+}
+
+
+#signup table>tbody>tr>td>label {
+		font-weight:bold;
+		color:#343352;	
+}
+
+/* -- Map --- */
+.map_canvas {
+	height:400px;
+	width:480px;
+	border:2px solid #ccc;
 }
