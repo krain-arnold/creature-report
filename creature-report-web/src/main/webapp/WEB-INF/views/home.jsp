@@ -50,9 +50,7 @@
 		</div>
 	</div>
 	<div class="wrapper">
-	<form id="login"
-		action="<c:url value='j_spring_security_check' />" method="POST"
-		name="f">
+	<form id="login" action="<c:url value='j_spring_security_check' />" method="POST" name="f">
 		<c:set var="loginErrorDiv" value="${post.loginerror}"/>
 		<div class="container">
 			<img id="logo" src="<c:url value="/resources/images/logoSmall.png"  />" alt="" />
@@ -88,8 +86,9 @@
 	</div>
 	<script src="<c:url value="resources/js/bootstrap.js"/>"></script>
 	<script type="text/javascript">
-	document.ready
+	$(document).ready(function(){
 		$("#${loginErrorDiv}").toggle();
+	});
 	</script>
     </body>
 </html>

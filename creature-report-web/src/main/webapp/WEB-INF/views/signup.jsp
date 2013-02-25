@@ -101,56 +101,55 @@ $(document).ready(function() {
 		</div>
 	</div>
 	<div class="wrapper">
-			<form:form method="POST" commandName="user" modelAttribute="user" id="signup">
+			<form:form method="POST"  class="form-horizontal" commandName="user" modelAttribute="user" id="signup">
 				<img id="logo" src="<c:url value="/resources/images/logoSmall.png" />">
 				<div class="row-fluid">
 					<div class="span10">
 						<h3>Sign Up Now !</h3>
 						<div class="control-group">
+							<form:label path="userName">User Name</form:label>
 							<div class="controls">
-						<table>
-							<tr>
-								<td><form:label path="userName">User Name</form:label> 
-								<form:input path="userName" required="true" class="input-medium"/></td>
-							</tr>
-							<tr>
-								<td><form:label path="password">Password</form:label> <form:input
-										type="password" path="password" required="true" /></td>
-							</tr>
-							<tr>
-								<td><label for="retype">Retype Password</label> <input
-									type="password" required id="retype" /></td>
-							</tr>
-							<tr>
-								<td><form:label path="email">Email</form:label> <form:input
-										path="email" required="true" type="email" /></td>
-							</tr>
-
-							<tr>
-							    <td><form:label path="address">Address</form:label>
-									<form:input path="address" required="true" style="width:400px;" id="address"/>
-									<a href="#getAdd" class="btn btn-small" id="getAdd" style="margin-top:-8px;">Find Address</a> 
-							    </td>										
-							</tr>										
-							<tr>
-							  	<td>
-							      <div class="map_canvas" id="map_canvas"></div>
-								</td>
-							</tr>
-							<tr>
-							    <td><form:label path="latitude">Latitude</form:label>
-									<form:input path="latitude" type="text" id="latitude"/></td>
-							</tr>
-							<tr>
-							    <td><form:label path="longitude">Longitude</form:label>
-								<form:input path="longitude" type="text" id="longitude"/></td>
-							</tr>
-							<tr>
-								<td><input type="submit" value="SignUp"
-									class="btn btn-large" /></td>
-							</tr>
-						</table>
+								<form:input path="userName" required="true" placeholder="UserName"/>
+							</div>
 						</div>
+						<div class="control-group">
+							<form:label path="password">Password</form:label>
+							<div class="controls">
+								<form:input type="password" path="password" required="true" />
+							</div>
+						</div>
+						<div class="control-group">
+							<label for="retype">Retype Password</label>
+							<div class="controls">
+								<input type="password" id="retype" />
+							</div>
+						</div>
+						<div class="control-group">
+							<form:label path="email">Email</form:label>
+							<div class="controls">
+								<form:input path="email" required="true" type="email" placeholder="Email" />
+							</div>
+						</div>
+						<div class="control-group">
+							<form:label path="address">Address</form:label>
+							<div class="controls">
+								<form:input path="address" required="true" style="width:400px;" id="address" placeholder="123 Main St"/>
+								<a href="#getAdd" class="btn btn-small" id="getAdd" style="margin-top:-8px;">Find Address</a> 
+							</div>
+						</div>
+						<div class="map_canvas" id="map_canvas"></div>
+						<div class="control-group">
+							<form:label path="latitude">Latitude</form:label>
+							<div class="controls">
+								<form:input path="latitude" type="text" id="latitude"/>
+							</div>
+						</div>
+						<div class="control-group">
+							<form:label path="longitude">Longitude</form:label>
+							<div class="controls">
+								<form:input path="longitude" type="text" id="longitude"/>
+							</div>
+							<input type="submit" value="SignUp" class="btn btn-large" />
 						</div>
 					</div>
 
