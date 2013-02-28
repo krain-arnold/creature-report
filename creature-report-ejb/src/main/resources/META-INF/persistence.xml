@@ -7,7 +7,7 @@
 <!-- 	<persistence-unit name="primary"> -->
         <persistence-unit name="testjpa">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<non-jta-data-source>java:/crDS</non-jta-data-source>
+		<non-jta-data-source>java:jboss/datasources/MysqlDS</non-jta-data-source>
 		<class>com.coppernickel.corp.domain.Student</class>
 		<class>com.coppernickel.corp.domain.Teacher</class>
 		<properties>
