@@ -26,10 +26,11 @@ public class ReportFormController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String showform(Model model){
         model.addAttribute("report", new Reports());
-        return "report";
+        return "user/report";
 	}
 	@RequestMapping(value="/save", method={RequestMethod.POST}, produces="application/json")
-	@ResponseBody public Map<String,String> homePageJson() {
+	@ResponseBody public Map<String,String> homePageJson(@RequestBody String report)throws Exception {
+		logger.info("Report Details: " + report);
 		Map<String,String> result = new HashMap<String,String>();
 		result.put("status", "success");
 		result.put("content", "It Works!");
