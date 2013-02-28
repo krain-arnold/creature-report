@@ -50,7 +50,9 @@
 		</div>
 	</div>
 	<div class="wrapper">
-	<form id="login" action="<c:url value='j_spring_security_check' />" method="POST" name="f">
+	<form id="login"
+		action="<c:url value='j_spring_security_check' />" method="POST"
+		name="f">
 		<c:set var="loginErrorDiv" value="${post.loginerror}"/>
 		<div class="container">
 			<img id="logo" src="<c:url value="/resources/images/logoSmall.png"  />" alt="" />
@@ -75,7 +77,7 @@
 					<li><em class="icon-tags"></em> <small> Use our reporting tools to chart progress.</small></li>
 					<li><em class="icon-tags"></em> <small> Earn back that lost time from having to handwrite all reports! </small></li>
 				</ul>
-				<a class="btn" href="#">More »</a>
+				<a class="btn" href="#">More Â»</a>
 			</div>
 		</div>
 		<div class="errorblock" id="loginErrorDiv" style="display:none">
@@ -86,9 +88,8 @@
 	</div>
 	<script src="<c:url value="resources/js/bootstrap.js"/>"></script>
 	<script type="text/javascript">
-	$(document).ready(function(){
+	document.ready
 		$("#${loginErrorDiv}").toggle();
-	});
 	</script>
     </body>
 </html>

@@ -12,25 +12,32 @@
 .panelL img {
 	width:	400px;
 	height: 150px;
+	float:left;
 }
 
 .panelL h3{
-	float:right;
+	float:left;
 	font-size:19px;
 	margin-right:70px;
 	margin-top:25px;
 	background:#FFF;
 	padding:5px;
+	padding-top:20px;
 }
-
-form { 
+.caret {
+	color:#6966AD;
+    border-bottom-color: #6966AD;
+    border-top-color: #6966AD;
+    margin-top: 6px;
+}
+#login { 
     float: none;
     border: 1px solid #ddd; 
     padding: 30px 40px 20px 40px; 
     margin-top:75px;
     margin-left:auto;
     margin-right:auto;
-    width: 715px;
+    width: 800px;
     background: #fff;
     min-height:370px;
     -webkit-border-radius: 10px;
@@ -189,4 +196,5 @@ form {
 	height:400px;
 	width:480px;
 	border:2px solid #ccc;
+	margin-bottom:20px;
 }
